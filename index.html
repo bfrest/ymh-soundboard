@@ -38,15 +38,13 @@
 
 
 <body>
-  <!-- <audio src="./sounds/whats-up-chomo.mp3" controls>
-      you don't have audio support
-  </audio> -->
 <div class='buttons'>
   <button onclick="playChomo()">Whats up there Chomo?</button>
   <button onclick="playFuckFace()">how'd you get a job here?</button>
   <button onclick="playYourDone()">Didn't follow proto.</button>
   <button onclick="playDoubleAgent()">Retired double agent</button>
   <button onclick="playYourFired()">Your Fired bud</button>
+  <button onclick="playtaTa()">tata there</button>
 </div>
   
 
@@ -70,6 +68,9 @@
     <source src='./sounds/your-fired-bud.mp3' type="audio/mpeg">
   </audio>
 
+<audio id='taTa'>
+    <source src='./sounds/tata.wav' type="audio/mpeg">
+  </audio>
 
 <script>
   const whatsUpChomo = document.getElementById("whatsUpChomo");
@@ -77,6 +78,7 @@
   const yourDone = document.getElementById("fedYourDone");
   const doubleAgent = document.getElementById("fedDoubleAgent");
   const yourFired = document.getElementById("fedYourFired");
+  const taTa = document.getElementById("taTa");
 
   function playChomo() {
     whatsUpChomo.play();
@@ -98,6 +100,10 @@
     yourFired.play();
   }
   
+
+  function playtaTa() {
+    taTa.play();
+  }
 </script>
 
 
