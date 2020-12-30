@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+   <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YMH Soundboard</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
 </head> 
@@ -43,6 +46,7 @@
   <button onclick="playFuckFace()">how'd you get a job here?</button>
   <button onclick="playYourDone()">Didn't follow proto.</button>
   <button onclick="playDoubleAgent()">Retired double agent</button>
+  <button onclick="playYourFired()">Your Fired bud</button>
 </div>
   
 
@@ -62,12 +66,17 @@
     <source src='./sounds/fed-double-agent.mov' type="audio/mpeg">
   </audio>
 
+  <audio id='fedYourFired'>
+    <source src='./sounds/your-fired-bud.m4a' type="audio/mpeg">
+  </audio>
+
 
 <script>
   const whatsUpChomo = document.getElementById("whatsUpChomo");
   const fuckFace = document.getElementById("fuckFace");
   const yourDone = document.getElementById("fedYourDone");
   const doubleAgent = document.getElementById("fedDoubleAgent");
+  const yourFired = document.getElementById("fedYourFired");
 
   function playChomo() {
     whatsUpChomo.play();
@@ -83,6 +92,10 @@
 
   function playDoubleAgent() {
     doubleAgent.play();
+  }
+
+  function playYourFired() {
+    yourFired.play();
   }
   
 </script>
