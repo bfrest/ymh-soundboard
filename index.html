@@ -45,6 +45,7 @@
   <button onclick="playDoubleAgent()">Retired double agent</button>
   <button onclick="playYourFired()">Your Fired bud</button>
   <button onclick="playtaTa()">tata there</button>
+  <button onclick="playSpits()">Where it spits</button>
 </div>
   
 
@@ -72,6 +73,10 @@
     <source src='./sounds/tata.wav' type="audio/mpeg">
   </audio>
 
+  <audio id='spits'>
+    <source src='./sounds/ed-spits.mp3' type="audio/mpeg">
+  </audio>
+
 <script>
   const whatsUpChomo = document.getElementById("whatsUpChomo");
   const fuckFace = document.getElementById("fuckFace");
@@ -79,6 +84,7 @@
   const doubleAgent = document.getElementById("fedDoubleAgent");
   const yourFired = document.getElementById("fedYourFired");
   const taTa = document.getElementById("taTa");
+  const spits = document.getElementById("spits");
 
   function playChomo() {
     whatsUpChomo.play();
@@ -103,6 +109,10 @@
 
   function playtaTa() {
     taTa.play();
+  }
+
+  function playSpits() {
+    spits.play();
   }
 </script>
 
