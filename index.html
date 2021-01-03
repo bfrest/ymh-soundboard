@@ -10,23 +10,17 @@
 </head> 
 
 <style>
-
-  /* body {
+ body {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    align-items: center;
-    justify-items: center;
-  } */
+  }
+  
 .buttons {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 100vh;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
 }
-  .buttons button {
+
+.buttons button {
   background: none;
   border: 2px solid black;
   padding: 5px;
@@ -34,86 +28,94 @@
   width: 70%;
   margin: 15px;
 }
+
+@media screen and (max-width:500px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+  
+}
 </style>
 
 
 <body>
 <div class='buttons'>
-  <button onclick="playChomo()">Whats up there Chomo?</button>
-  <button onclick="playFuckFace()">how'd you get a job here?</button>
-  <button onclick="playYourDone()">Didn't follow proto.</button>
-  <button onclick="playDoubleAgent()">Retired double agent</button>
-  <button onclick="playYourFired()">Your Fired bud</button>
-  <button onclick="playtaTa()">tata there</button>
-  <button onclick="playSpits()">Where it spits</button>
-</div>
+  <div>
+    <button onclick="playSound('whatsUpChomo')">Whats up there Chomo?</button>
+    <audio id='whatsUpChomo'>
+     <source src='./sounds/whats-up-chomo.mp3' type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div>
+    <button onclick="playSound('fuckFace')">how'd you get a job here?</button>
+    <audio id='fuckFace'>
+      <source src='./sounds/fuck-face.wav' type="audio/mpeg">
+    </audio>
+  </div>
   
+  <div>
+    <button onclick="playSound('yourDone')">Didn't follow proto.</button>
+    <audio id='fedYourDone'>
+      <source src='./sounds/fed-your-done.mp3' type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div>
+    <button onclick="playSound('doubleAgent')">Retired double agent</button>
+    <audio id='fedDoubleAgent'>
+      <source src='./sounds/fed-double-agent.mov' type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div>
+    <button onclick="playYourSound('yourFired')">Your Fired bud</button>
+    <audio id='fedYourFired'>
+      <source src='./sounds/your-fired-bud.mp3' type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div>
+    <button onclick="playSound('taTa')">tata there</button>
+    <audio id='taTa'>
+      <source src='./sounds/tata.wav' type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div>
+    <button onclick="playSound('spits')">Where it spits</button>
+    <audio id='spits'>
+      <source src='./sounds/ed-spits.mp3' type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div>
+    <button onclick="playSound('itsBad')">Don't do it it's bad</button>
+     <audio id='itsBad'>
+      <source src='./sounds/dont-do-it-its-bad.mp3' type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div>
+    <button onclick="playSound('coolGuyClub')">The cool guy club</button>
+     <audio id='coolGuyClub'>
+      <source src='./sounds/cool-guy-club.mp3' type="audio/mpeg">
+    </audio>
+  </div>
+</div>
 
-  <audio id='whatsUpChomo'>
-    <source src='./sounds/whats-up-chomo.mp3' type="audio/mpeg">
-  </audio>
+ 
 
-  <audio id='fuckFace'>
-    <source src='./sounds/fuck-face.wav' type="audio/mpeg">
-  </audio>
-
-   <audio id='fedYourDone'>
-    <source src='./sounds/fed-your-done.mp3' type="audio/mpeg">
-  </audio>
-
-   <audio id='fedDoubleAgent'>
-    <source src='./sounds/fed-double-agent.mov' type="audio/mpeg">
-  </audio>
-
-  <audio id='fedYourFired'>
-    <source src='./sounds/your-fired-bud.mp3' type="audio/mpeg">
-  </audio>
-
-<audio id='taTa'>
-    <source src='./sounds/tata.wav' type="audio/mpeg">
-  </audio>
-
-  <audio id='spits'>
-    <source src='./sounds/ed-spits.mp3' type="audio/mpeg">
-  </audio>
+  
 
 <script>
-  const whatsUpChomo = document.getElementById("whatsUpChomo");
-  const fuckFace = document.getElementById("fuckFace");
-  const yourDone = document.getElementById("fedYourDone");
-  const doubleAgent = document.getElementById("fedDoubleAgent");
-  const yourFired = document.getElementById("fedYourFired");
-  const taTa = document.getElementById("taTa");
-  const spits = document.getElementById("spits");
-
-  function playChomo() {
-    whatsUpChomo.play();
-  }
-
-  function playFuckFace() {
-    fuckFace.play();
-  }
-
-  function playYourDone() {
-    yourDone.play();
-  }
-
-  function playDoubleAgent() {
-    doubleAgent.play();
-  }
-
-  function playYourFired() {
-    yourFired.play();
+  
+// Takes away the need to create a new variable every time you add a new sound.
+  function playSound(nameOfSound) {
+    const soundToPlay = document.getElementById(`${nameOfSound}`);
+    soundToPlay.play();
   }
   
-
-  function playtaTa() {
-    taTa.play();
-  }
-
-  function playSpits() {
-    spits.play();
-  }
 </script>
 
 
