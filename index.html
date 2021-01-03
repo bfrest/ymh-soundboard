@@ -1,123 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="utf-8">
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YMH Soundboard</title>
-  <link rel="stylesheet" href="styles.css" type="text/css">
-</head> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YMH Soundboard</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
 
-<style>
- body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-.buttons {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-}
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
 
-.buttons button {
-  background: none;
-  border: 2px solid black;
-  padding: 5px;
-  font-size: large;
-  width: 70%;
-  margin: 15px;
-}
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-@media screen and (max-width:500px) {
-  .buttons {
-    grid-template-columns: 1fr;
-  }
-  
-}
-</style>
+    .buttons button {
+      background: none;
+      border: 2px solid black;
+      padding: 5px;
+      font-size: large;
+      width: 70%;
+      margin: 15px;
+    }
 
+    @media screen and (max-width: 500px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
-<body>
-<div class='buttons'>
-  <div>
-    <button onclick="playSound('whatsUpChomo')">Whats up there Chomo?</button>
-    <audio id='whatsUpChomo'>
-     <source src='./sounds/whats-up-chomo.mp3' type="audio/mpeg">
-    </audio>
-  </div>
+  <body>
+    <div class="buttons">
+      <div>
+        <button onclick="playSound('whatsUpChomo')">Whats up there Chomo?</button>
+        <audio id="whatsUpChomo">
+          <source src="./sounds/whats-up-chomo.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
 
-  <div>
-    <button onclick="playSound('fuckFace')">how'd you get a job here?</button>
-    <audio id='fuckFace'>
-      <source src='./sounds/fuck-face.wav' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playSound('yourDone')">Didn't follow proto.</button>
-    <audio id='fedYourDone'>
-      <source src='./sounds/fed-your-done.mp3' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playSound('doubleAgent')">Retired double agent</button>
-    <audio id='fedDoubleAgent'>
-      <source src='./sounds/fed-double-agent.mov' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playYourSound('yourFired')">Your Fired bud</button>
-    <audio id='fedYourFired'>
-      <source src='./sounds/your-fired-bud.mp3' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playSound('taTa')">tata there</button>
-    <audio id='taTa'>
-      <source src='./sounds/tata.wav' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playSound('spits')">Where it spits</button>
-    <audio id='spits'>
-      <source src='./sounds/ed-spits.mp3' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playSound('itsBad')">Don't do it it's bad</button>
-     <audio id='itsBad'>
-      <source src='./sounds/dont-do-it-its-bad.mp3' type="audio/mpeg">
-    </audio>
-  </div>
-  
-  <div>
-    <button onclick="playSound('coolGuyClub')">The cool guy club</button>
-     <audio id='coolGuyClub'>
-      <source src='./sounds/cool-guy-club.mp3' type="audio/mpeg">
-    </audio>
-  </div>
-</div>
+      <div>
+        <button onclick="playSound('fuckFace')">how'd you get a job here?</button>
+        <audio id="fuckFace">
+          <source src="./sounds/fuck-face.wav" type="audio/mpeg" />
+        </audio>
+      </div>
 
- 
+      <div>
+        <button onclick="playSound('yourDone')">Didn't follow proto.</button>
+        <audio id="fedYourDone">
+          <source src="./sounds/fed-your-done.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
 
-  
+      <div>
+        <button onclick="playSound('doubleAgent')">Retired double agent</button>
+        <audio id="fedDoubleAgent">
+          <source src="./sounds/fed-double-agent.mov" type="audio/mpeg" />
+        </audio>
+      </div>
 
-<script>
-  
-// Takes away the need to create a new variable every time you add a new sound.
-  function playSound(nameOfSound) {
-    const soundToPlay = document.getElementById(`${nameOfSound}`);
-    soundToPlay.play();
-  }
-  
-</script>
+      <div>
+        <button onclick="playYourSound('yourFired')">Your Fired bud</button>
+        <audio id="fedYourFired">
+          <source src="./sounds/your-fired-bud.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
 
+      <div>
+        <button onclick="playSound('taTa')">tata there</button>
+        <audio id="taTa">
+          <source src="./sounds/tata.wav" type="audio/mpeg" />
+        </audio>
+      </div>
 
-</body>
+      <div>
+        <button onclick="playSound('spits')">Where it spits</button>
+        <audio id="spits">
+          <source src="./sounds/ed-spits.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+
+      <div>
+        <button onclick="playSound('itsBad')">Don't do it it's bad</button>
+        <audio id="itsBad">
+          <source src="./sounds/dont-do-it-its-bad.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+
+      <div>
+        <button onclick="playSound('coolGuyClub')">The cool guy club</button>
+        <audio id="coolGuyClub">
+          <source src="./sounds/cool-guy-club.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </div>
+
+    <script>
+      // Takes away the need to create a new variable every time you add a new sound.
+      function playSound(nameOfSound) {
+        const soundToPlay = document.getElementById(`${nameOfSound}`);
+        soundToPlay.play();
+      }
+    </script>
+  </body>
 </html>
